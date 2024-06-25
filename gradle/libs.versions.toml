@@ -1,0 +1,126 @@
+[versions]
+# plugins
+android-gradle                      = "8.3.2"
+detekt                              = "1.23.6"
+junit                               = "1.10.0.0"
+ksp                                 = "2.0.0-1.0.22"
+ktlint                              = "4.3.0"
+
+# production libraries
+coil                                = "2.6.0"
+material-icons                      = "1.0.0"
+compose-bom                         = "2024.06.00"
+compose-compiler                    = "1.5.14"
+compose-rules                       = "0.4.4"
+compose-material3                   = "1.2.1"
+hilt                                = "2.51.1"
+kotlin                              = "2.0.0"
+kotlin-coroutines                   = "1.8.1"
+kotlin-serialization                = "1.7.0"
+lifecycle                           = "2.7.0" # update to 2.8.x when it fixes the crash on release version that happens on 2.8.2
+navigation                          = "2.7.7"
+navigation-hilt                     = "1.2.0"
+okhttp-logging-interceptor          = "4.12.0"
+retrofit                            = "2.11.0"
+moshi                               = "1.12.0"
+room                                = "2.6.1"
+timber                              = "5.0.1"
+retrofit-converter                  = "0.8.0"
+
+# location
+play-services-location              = "20.0.0"
+
+# test libraries
+test-junit                          = "5.10.2"
+test-junit4                         = "4.13.2"
+test-mockk                          = "1.13.11"
+test-turbine                        = "1.1.0"
+
+# android test libraries
+test-android-baseline-profile       = "1.2.4"
+test-android-compose-ui-test        = "1.6.8"
+test-android-junit                  = "1.1.5"
+test-android-profile-installer      = "1.3.1"
+test-android-runner                 = "1.5.2"
+test-arch-core                      = "2.1.0"
+test-mock-server                    = "4.9.1"
+
+
+[plugins]
+android-application                 = { id = "com.android.application", version.ref = "android-gradle" }
+android-library                     = { id = "com.android.library", version.ref = "android-gradle" }
+android-test                        = { id = "com.android.test", version.ref = "android-gradle" }
+baseline-profile                    = { id = "androidx.baselineprofile", version.ref = "test-android-baseline-profile" }
+detekt                              = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+hilt                                = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+junit                               = { id = "de.mannodermaus.android-junit5", version.ref = "junit" }
+kotlin                              = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose-compiler             = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-parcelize                    = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-serialization                = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp                                 = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+ktlint                              = { id = "org.jmailen.kotlinter", version.ref = "ktlint" }
+
+
+[libraries]
+# production libraries
+coil                                = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+material-icons                      = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "material-icons" }
+compose-bom                         = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+compose-material3                   = { group = "androidx.compose.material3", name = "material3", version.ref = "compose-material3" }
+compose-rules                       = { group = "io.nlopez.compose.rules", name = "ktlint", version.ref = "compose-rules" }
+hilt                                = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler                       = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+kotlin-coroutines                   = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
+kotlin-serialization                = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin-serialization" }
+kotlin-serialization-converter      = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
+lifecycle-runtime-compose           = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
+navigation                          = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+navigation-hilt                     = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "navigation-hilt" }
+okhttp-logging-interceptor          = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp-logging-interceptor" }
+retrofit                            = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-serialization-converter    = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit-converter" }
+moshi                               = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshi" }
+moshi-kotlin                        = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+moshi-adapters                      = { group = "com.squareup.moshi", name = "moshi-adapters", version.ref = "moshi" }
+room                                = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler                       = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx                            = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+timber                              = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+location                            = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play-services-location" }
+
+# test libraries
+test-junit                          = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "test-junit" }
+test-junit4                         = { group = "junit", name = "junit", version.ref = "test-junit4" }
+test-kotlin                         = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+test-kotlin-coroutines              = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlin-coroutines" }
+test-mockk                          = { group = "io.mockk", name = "mockk", version.ref = "test-mockk" }
+test-turbine                        = { group = "app.cash.turbine", name = "turbine", version.ref = "test-turbine" }
+test-arch-core                      = { group = "androidx.arch.core", name = "core-testing", version.ref = "test-arch-core" }
+test-mockwebserver                  = { group = "com.squareup.okhttp3", name = "mockwebserver", version.ref = "test-mock-server" }
+
+# android test libraries
+test-android-benchmark-macro        = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "test-android-baseline-profile" }
+test-android-compose                = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "test-android-compose-ui-test" }
+test-android-hilt                   = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+test-android-junit                  = { group = "androidx.test.ext", name = "junit", version.ref = "test-android-junit" } # for @RunWith(AndroidJUnit4::class)
+test-android-profile-installer      = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "test-android-profile-installer" } # for consuming baseline-prof.txt
+test-android-runner                 = { group = "androidx.test", name = "runner", version.ref = "test-android-runner" }
+
+# debug libraries
+debug-compose-manifest              = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "test-android-compose-ui-test" }
+
+
+[bundles]
+common-test = [
+    "test-junit",
+    "test-kotlin",
+    "test-kotlin-coroutines",
+    "test-mockk",
+    "test-turbine"
+]
+common-android-test = [
+    "test-android-compose",
+    "test-android-hilt",
+    "test-android-runner"
+]

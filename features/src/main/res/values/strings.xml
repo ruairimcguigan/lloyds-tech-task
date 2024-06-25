@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="movie_title">Title: </string>
+    <string name="movie_overview">Overview: </string>
+    <string name="movie_vote_average">Average rating: </string>
+
+    <string name="movies_error_fetching">Sorry, something went wrong when fetching movies</string>
+    <string name="movies_error_refreshing">Sorry, something went wrong when refreshing movies</string>
+
+    <string name="movies_image_content_description">Movie image</string>
+</resources>
