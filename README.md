@@ -11,7 +11,7 @@ The project is structured as a Gradle modularized project by features, promoting
 
 ## Project configuration — Gradle modularization
 
-The alternative approach, becoming more popular recently, is called “modularization by feature”
+An alternative approach to traditional strict clean architecture, which is becoming more popular recently (in mobile), is called “modularization by feature”
 
 - **app** that everyone is familiar with and has access to all other modules,
 - **core** that gathers all reusable components used by multiple features and doesn’t “see” other modules,
